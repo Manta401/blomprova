@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Dirigibbile</title>
+    <style>
+        body{background-color: aquamarine; height: 100%; width: 100%;}
+        .sliderl {
+            -webkit-appearance: none;
+            width: 55%;
+            height: 45px;
+            background: rgb(245, 179, 179);
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            transform: rotate(-90deg);
+            position: absolute;
+            top: 25%;
+            right: 45%;
+        }
+        .sliderl::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 45px;
+            height: 45px;
+            background: rgb(0, 132, 255);
+            cursor: pointer;
+        }
+        .sliderr {
+            -webkit-appearance: none;
+            width: 55%;
+            height: 45px;
+            background: rgb(245, 179, 179);
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            transform: rotate(-90deg);
+            position: absolute;
+            top: 25%;
+            right: 5%;
+        }
+        .sliderr::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 45px;
+            height: 45px;
+            background: rgb(0, 132, 255);
+            cursor: pointer;
+        }
+        .slidert {
+            -webkit-appearance: none;
+            width: 35%;
+            height: 45px;
+            background: rgb(245, 179, 179);
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            transform: rotate(-90deg);
+            position: absolute;
+            top: 25%;
+            right: 35%;
+        }
+        .slidert::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 45px;
+            height: 45px;
+            background: rgb(0, 132, 255);
+            cursor: pointer;
+        }
+        .sliderx {
+            -webkit-appearance: none;
+            width: 35%;
+            height: 45px;
+            background: rgb(245, 179, 179);
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            position: absolute;
+            bottom: 25%;
+            right: 35%;
+        }
+        .sliderx::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 45px;
+            height: 45px;
+            background: rgb(0, 132, 255);
+            cursor: pointer;
+        }
+    
+
+    </style>
+    <script>
+        var elem = document.documentElement;
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
+
+    </script>
+</head>
+<body>
+
+    <div class="slidecontainer" id="slideleft">
+        <input type="range" min="0" max="255" value="0" class="sliderl" id="myRange">
+    </div>
+    <div class="slidecontainer" id="slideright">
+        <input type="range" min="0" max="255" value="0" class="sliderr" id="myRange">
+    </div>
+    <div class="slidecontainer" id="slidert">
+        <input type="range" min="0" max="180" value="90" class="slidert" id="myRange">
+    </div>
+    <div class="slidecontainer" id="sliderx">
+        <input type="range" min="0" max="255" value="0" class="sliderx" id="myRange">
+    </div>
+    <button onclick="openFullscreen();">Open Fullscreen</button>
+    <button onclick="closeFullscreen();">Close Fullscreen</button>
+
+</body>
+</html>
