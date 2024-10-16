@@ -18,13 +18,14 @@
             position: absolute;
             top: 25%;
             right: 45%;
+            
         }
         .sliderl::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
             width: 45px;
             height: 65px;
-            background: rgb(0, 132, 255);
+            background: rgb(0, 4, 255);
             cursor: pointer;
         }
         .sliderr {
@@ -46,7 +47,7 @@
             appearance: none;
             width: 45px;
             height: 65px;
-            background: rgb(0, 132, 255);
+            background: rgb(0, 4, 255);
             cursor: pointer;
         }
         .slidert {
@@ -68,7 +69,7 @@
             appearance: none;
             width: 45px;
             height: 65px;
-            background: rgb(0, 132, 255);
+            background: rgb(0, 4, 255);
             cursor: pointer;
         }
         .sliderx {
@@ -89,10 +90,41 @@
             appearance: none;
             width: 45px;
             height: 65px;
-            background: rgb(0, 132, 255);
+            background: rgb(0, 4, 255);
             cursor: pointer;
         }
-    
+
+        body{
+          background-image: url("https://wallup.net/wp-content/uploads/2019/09/1011899-sky-clouds.jpg" );
+        }
+        
+        #scrittabk{
+          text-align: center;
+          position: absolute;
+          bottom: 20%;
+          right: 48%;
+        }
+
+        #scrittarx{
+          text-align: center;
+          position: absolute;
+          bottom: 48%;
+          right: 69%;
+        }
+
+        #scrittacx{
+          text-align: center;
+          position: absolute;
+          bottom: 55%;
+          right: 50%;
+        }
+
+        #scrittasx{
+          text-align: center;
+          position: absolute;
+          bottom: 48%;
+          right: 29%;
+        }
 
     </style>
     <script>
@@ -122,18 +154,31 @@ function closeFullscreen() {
 <body>
 
     <div class="slidecontainer" id="slideleft">
-        <input type="range" min="0" max="255" name="sliderl" value="0" class="sliderl" id="sliderl">
-        <p>coso: <span id="bho"></span></p>
+        <input type="range" min="0" max="255" name="sliderl" value="0" class="sliderl" id="sliderl" title="LEFT">
+       <!-- <p>coso: <span id="bho"></span></p> -->
     </div>
     <div class="slidecontainer" id="slideright">
-        <input type="range" min="0" max="255" name="sliderr" value="0" class="sliderr" id="sliderr">
+        <input type="range" min="0" max="255" name="sliderr" value="0" class="sliderr" id="sliderr" title="RIGHT">
     </div>
     <div class="slidecontainer" id="slidert">
-        <input type="range" min="0" max="180" name="slidert" value="90" class="slidert" id="slidert">
-    </div>
+        <input type="range" min="0" max="180" name="slidert" value="90" class="slidert" id="slidert" title="TILT">
+      </div>
     <div class="slidecontainer" id="sliderx">
-        <input type="range" min="0" max="255" name="sliderx" value="0" class="sliderx" id="sliderx">
+        <input type="range" min="0" max="255" name="sliderx" value="0" class="sliderx" id="sliderx" title="BACK">
+      </div>
+    <div id="scrittabk">
+      <h2>BACK</h2>
     </div>
+    <div id="scrittarx">
+      <h2>RIGHT</h2>
+    </div>
+    <div id="scrittacx">
+      <h2>TILT</h2>
+    </div>
+    <div id="scrittasx">
+      <h2>LEFT</h2>
+    </div>
+
     
     <script>
       var sliderl = document.getElementById("sliderl");
