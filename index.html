@@ -96,12 +96,13 @@
 
         body{
             background-color:whitesmoke;
+            color: black;
         }
         
         #scrittabk{
           text-align: center;
           position: absolute;
-          bottom: 17%;
+          bottom: 20%;
           right: 48%;
         }
 
@@ -155,41 +156,70 @@ function closeFullscreen() {
 
     <div class="slidecontainer" id="slideleft">
         <input type="range" min="0" max="255" name="sliderl" value="0" class="sliderl" id="sliderl" title="LEFT">
-       <!-- <p>coso: <span id="bho"></span></p> -->
     </div>
+
     <div class="slidecontainer" id="slideright">
         <input type="range" min="0" max="255" name="sliderr" value="0" class="sliderr" id="sliderr" title="RIGHT">
     </div>
-    <div class="slidecontainer" id="slidert">
+
+    <div class="slidecontainer" id="slidertilt">
         <input type="range" min="0" max="180" name="slidert" value="90" class="slidert" id="slidert" title="TILT">
       </div>
-    <div class="slidecontainer" id="sliderx">
+
+    <div class="slidecontainer" id="sliderdietro">
         <input type="range" min="-255" max="255" name="sliderx" value="0" class="sliderx" id="sliderx" title="BACK">
       </div>
+
+
     <div id="scrittabk">
       <h2>BACK</h2>
+      <br>
+      <span id="rb"></span>
     </div>
     <div id="scrittarx">
-      <h2>LEFT</h2>
+      <h2>RIGHT</h2>
+      <br>
+      <span id="rr"></span>
     </div>
     <div id="scrittacx">
       <h2>TILT</h2>
+      <br>
+      <span id="rt"></span>
     </div>
     <div id="scrittasx">
-      <h2>RIGHT</h2>
+      <h2>LEFT</h2>
+      <br>
+      <span id="rl"></span>
     </div>
 
-    
+
     <script>
       var sliderl = document.getElementById("sliderl");
       var sliderr = document.getElementById("sliderr");
       var slidert = document.getElementById("slidert");
       var sliderx = document.getElementById("sliderx");
-      var output = document.getElementById("bho");
+      var output = document.getElementById("rl");
+      var output = document.getElementById("rr");
+      var output = document.getElementById("rt");
+      var output = document.getElementById("rb");
       output.innerHTML = sliderl.value;
-      output.innerHTML = slidert.value;
+      output.innerHTML = sliderr.value;
       output.innerHTML = slidert.value;
       output.innerHTML = sliderx.value;
+
+      sliderl.oninput = function() {
+        output.innerHTML = this.value;
+      }
+      sliderr.oninput = function() {
+        output.innerHTML = this.value;
+      }
+      slidert.oninput = function() {
+        output.innerHTML = this.value;
+      }
+      sliderx.oninput = function() {
+        output.innerHTML = this.value;
+      }
+
     </script>
 
 
